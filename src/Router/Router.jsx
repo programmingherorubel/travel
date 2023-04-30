@@ -4,6 +4,7 @@ import BannerSlider from "../Layout/BannerSlider";
 import Home from "../Pages/Home";
 import BookingSingleTravel from "../Pages/BookingSingleTravel";
 import Login from "../Pages/Login";
+import Reg from "../Pages/Reg";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     {
         path:'/login',
         element:<Login></Login>
+    },
+    {
+        path:'/reg',
+        element:<Reg></Reg>
     }
 ])
 

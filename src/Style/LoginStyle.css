@@ -1,0 +1,86 @@
+.hamburger2{
+    display: none;
+}
+.nav2MobileMenu{
+    position: fixed;
+}
+.nav2MobileMenu{
+    position: fixed;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.082);
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(-100%);
+}
+.nav2MobileMenu.active{
+    transition: all 0.5s ease-in-out;
+    transform: translateX(0%);
+}
+
+.logininput{
+    border-bottom: 1px solid rgba(204, 202, 202, 0.671)!important;
+}
+
+.logininput::placeholder{
+    color: black;
+}
+.loginButtonSUbmit{
+  padding: 6px 20px;
+  border: 1px solid transparent;
+  background-color: #F9A51A;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .hamburger2{
+        display: block;
+    }
+    .customNavMenu2{
+        display: none;
+    }
+    .customNavLogin{
+        display: none;
+    }
+  
+  }
+  
+  /*Small devices (landscape phones, 576px and up)*/
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .hamburger2{
+        display: block;
+    }
+    .customNavMenu2{
+        display: none;
+    }
+    .customNavLogin{
+        display: none;
+    }
+  
+  }
+  
+  /*Medium devices (tablets, 768px and up)*/
+  @media (min-width: 768px) and (max-width: 991.98px) {
+   
+  
+  }
+  
+  /*Large devices (desktops, 992px and up)*/
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  
+  }
+  /*x-large devices (dekstops,1200px and up) */
+  @media (min-width: 1200px) and (max-width: 1399.98px) {
+      
+  }
+  
+  /*Extra extra  large devices (larges desktops, 1200px and up)*/
+  @media (min-width: 1400px) {
+  
+  }
