@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import logo from '../img/images/logo.png'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const CustomNavbarPart2 = () => {
     const [activeLogin,setActiveLogin] = useState(false)
+    const {user,logout} = useContext(AuthContext)
+    console.log(user)
     return (
         <Container>
             <Row>
@@ -14,7 +17,7 @@ const CustomNavbarPart2 = () => {
                         <div className='customNavMenu2'>
                         <ul style={{display:'flex',gap:'15px'}}>
                                 <li style={{listStyle:'none'}}>
-                                    <Link style={{textDecoration:'none',color:'black',fontWeight:'600'}}>Home</Link>
+                                    <Link to='/' style={{textDecoration:'none',color:'black',fontWeight:'600'}}>Home</Link>
                                 </li>
 
 
@@ -34,7 +37,7 @@ const CustomNavbarPart2 = () => {
                             </ul>
                         </div>
                         <div className='customNavLogin'>
-                            <button className='loginButton'>Login</button>
+                            {user?.email ? <button onClick={()=> logout()} className='loginButton'>Logout</button> : <button className='loginButton'><Link to='/login'style={{textDecoration:'none',color:'black'}}>Login</Link></button>}
                         </div>
                         <div onClick={()=>setActiveLogin(!activeLogin)} className='hamburger2 mt-2'><i style={{fontSize:'22px',color:'black'}} className="fa-sharp fa-solid fa-bars"></i></div>
                     </div>
@@ -42,7 +45,7 @@ const CustomNavbarPart2 = () => {
                     <div className={activeLogin ? 'nav2MobileMenu active' : 'nav2MobileMenu'}>
                         <ul>
                                     <li className='mt-3' style={{listStyle:'none'}}>
-                                        <Link style={{textDecoration:'none',color:'black',fontWeight:'600'}}>Home</Link>
+                                        <Link to='/'style={{textDecoration:'none',color:'black',fontWeight:'600'}}>Home</Link>
                                     </li>
 
 
@@ -60,6 +63,9 @@ const CustomNavbarPart2 = () => {
                                         <Link style={{textDecoration:'none',color:'black',fontWeight:'600'}}>Contact</Link>
                                     </li>
                                 </ul>
+                                <div className='mt-2 mb-3'>
+                                {user?.email ? <button onClick={()=> logout()} className='loginButton'>Logout</button> : <button className='loginButton'><Link to='/login' style={{textDecoration:'none',color:'black'}}>Login</Link></button>}
+                                </div>
                     </div>
                 </Col>
             </Row>

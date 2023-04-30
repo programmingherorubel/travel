@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Header from '../Components/Header';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const BookingSingleTravel = () => {
     const bookinginfo = useLoaderData()
@@ -35,7 +35,7 @@ const BookingSingleTravel = () => {
                                         <input type="date" className='form-control' />
                                     </div>
                                 </div>
-                                    <button type='submit' className='bookingButton mt-4 w-100'>Booking</button>
+                                    <Link to={`/booking/${bookinginfo.id}`} style={{textDecoration:'none'}}><button type='submit' className='bookingButton mt-4 w-100'>Booking</button></Link>
                             </form>
                         </div>
                     </Col>

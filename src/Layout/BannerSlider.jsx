@@ -69,7 +69,7 @@ const BannerSlider = () => {
                 <h1 style={{color:'white',fontSize:'60px'}} className='bannerTitle'>{contentData.title.toLocaleUpperCase()}</h1>
                 <p style={{color:'gray'}}>{contentData.description}</p>
                 <button className='loginButton'>
-                  <Link to={`/travel/${contentData.id}`} style={{textDecoration:'none',color:'black'}}>Booking <i class="fa-solid fa-arrow-right"></i></Link>
+                  <Link to={`/travel/${contentData.id}`} style={{textDecoration:'none',color:'black'}}>Booking <i className="fa-solid fa-arrow-right"></i></Link>
                 </button>
               </Col>
               <Col md={6} className='mt-5'>
