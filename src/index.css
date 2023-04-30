@@ -1,0 +1,126 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.home{
+  padding: 10px 0px;
+  height: 100vh;
+  background:linear-gradient(rgba(0, 0, 0, 0.685),rgba(0, 0, 0, 0.685)),url(../src//img/images/Rectangle\ 1.png);
+  background-position: top bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.search::placeholder{
+  color: white;
+}
+.customnavbar{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  position: relative;
+}
+.login button{
+  padding: 6px 20px;
+  border: 1px solid transparent;
+  background-color: #F9A51A;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.bookingButton{
+  padding: 6px 20px;
+  border: 1px solid transparent;
+  background-color: #F9A51A;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.loginButton{
+  margin:0px 20px;
+  padding: 6px 20px;
+  border: 1px solid transparent;
+  background-color: #F9A51A;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.hamburger{
+  display: none;
+}
+.moibileMenu{
+  padding:20px 0px ;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.829);
+  width: 100%;
+  transition: all 0.7s ease-in-out;
+  transform: translateX(-100%);
+}
+.moibileMenu ul li{
+  margin-top: 20px;
+}
+.active{
+  transition: all 0.7s ease-in-out;
+  transform: translateX(0%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  .login,.navmenu,.searchContainer{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
+
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .login,.navmenu,.searchContainer{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .login,.navmenu,.searchContainer{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+/*x-large devices (dekstops,1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    
+}
+
+/*Extra extra  large devices (larges desktops, 1200px and up)*/
+@media (min-width: 1400px) {
+
+}
